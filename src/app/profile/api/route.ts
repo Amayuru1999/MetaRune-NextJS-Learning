@@ -6,5 +6,9 @@ export async function GET(request: NextRequest){
     const headerList=headers();
     console.log("🟧 Authorization Header:",requestHeaders.get("Authorization"));
     console.log("🟦 Header List:",headerList.get("Authorization"));
-    return new Response("Profile API data")
+    return new Response("<h1>Profile API Data</h1>",{
+        headers: {
+            "Content-Type":"text/html"
+        }
+    })
 }
